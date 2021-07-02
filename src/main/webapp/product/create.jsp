@@ -6,7 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <html>
 <head>
     <title>Create new Product</title>
@@ -25,7 +26,7 @@
     </c:if>
 </p>
 <p>
-    <a href="/ServletProduct">Back to product list</a>
+    <a href="/product">Back to product list</a>
 </p>
 <form method="post">
     <fieldset>

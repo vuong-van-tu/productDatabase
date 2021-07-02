@@ -30,18 +30,47 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void update(int id, Product product) {
-        listProducts.add(id, product);
+        int index =-1;
+        for (int i=0; i<listProducts.size(); i++) {
+            if (listProducts.get(i).getId() == id) {
+                index =i;
+            }
+        }
+        listProducts.set(index,product);
+
     }
 
     @Override
     public void remove(int id) {
-        listProducts.remove(id);
+        int index =-1;
+        for (int i=0; i<listProducts.size(); i++) {
+            if (listProducts.get(i).getId() == id) {
+                index =i;
+            }
+        }
+        listProducts.remove(index);
     }
 
     @Override
-    public Product findByName(String name) {
-        int index = listProducts.indexOf(name);
-        return listProducts.get(index);
+    public List<Product> findByName(String name) {
+        List<Product> newList = new ArrayList<>();
+        for (int i=0; i<listProducts.size(); i++) {
+            if (listProducts.get(i).getName().equals(name)) {
+                newList.add(listProducts.get(i));
+            }
+        }
+        return newList;
     }
+
+    @Override
+    public Product findById(int id) {
+        for (int i=0; i<listProducts.size(); i++) {
+            if (listProducts.get(i).getId() == id) {
+                return listProducts.get(i);
+            }
+        }
+        return null;
+    }
+
 
 }

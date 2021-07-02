@@ -1,8 +1,14 @@
-service/ProductService.java
- service.ProductService
-service/ProductServiceImpl.java
- service.ProductServiceImpl
 model/Product.java
  model.Product
 controller/ServletProduct.java
  controller.ServletProduct
+service/ProductService.java
+ service.ProductService
+service/ProductServiceImpl.java
+ service.ProductServiceImpl
+dao/IProductDAO.java
+ dao.IProductDAO
+dao/ProductDAO.java
+ dao.ProductDAO
+controller/ServletDemoSql.java
+ controller.ServletDemoSql
